@@ -203,8 +203,7 @@ class ViewController: UIViewController {
                 priority: "High"
             ),
         ]
-        return errors.last!
-//        return errors[Int.random(in: 0..<errors.count)]
+        return errors[Int.random(in: 0..<errors.count)]
     }
     
     @objc
