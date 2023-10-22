@@ -41,6 +41,15 @@
 		5B4593622AE3C7EC00ACC7B9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5B4593612AE3C7EC00ACC7B9 /* FirebaseStorage */; };
 		5B4593642AE3C7EC00ACC7B9 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 5B4593632AE3C7EC00ACC7B9 /* FirebaseStorageCombine-Community */; };
 		5B4593662AE3DA6800ACC7B9 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4593652AE3DA6800ACC7B9 /* NotificationManager.swift */; };
+		5B4593692AE4F28500ACC7B9 /* OneGoLayoutConstraint in Frameworks */ = {isa = PBXBuildFile; productRef = 5B4593682AE4F28500ACC7B9 /* OneGoLayoutConstraint */; };
+		5B45936C2AE4F4B200ACC7B9 /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45936B2AE4F4B200ACC7B9 /* ProgressCell.swift */; };
+		5B4593702AE4F67E00ACC7B9 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45936F2AE4F67E00ACC7B9 /* ProgressView.swift */; };
+		5BD2C9942AE502EA00C17447 /* ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C9932AE502EA00C17447 /* ProgressHeader.swift */; };
+		5BD2C9962AE50CCA00C17447 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C9952AE50CC900C17447 /* ToastView.swift */; };
+		5BD2C9982AE50D8E00C17447 /* ToastType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C9972AE50D8E00C17447 /* ToastType.swift */; };
+		5BD2C99B2AE513BF00C17447 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C99A2AE513BF00C17447 /* RegisterCell.swift */; };
+		5BD2C99D2AE5162000C17447 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C99C2AE5162000C17447 /* FieldType.swift */; };
+		5BD2C99F2AE517EB00C17447 /* RegisterField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C99E2AE517EB00C17447 /* RegisterField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +62,14 @@
 		5B4593262AE3C60B00ACC7B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B45932C2AE3C78000ACC7B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B4593652AE3DA6800ACC7B9 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		5B45936B2AE4F4B200ACC7B9 /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
+		5B45936F2AE4F67E00ACC7B9 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		5BD2C9932AE502EA00C17447 /* ProgressHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeader.swift; sourceTree = "<group>"; };
+		5BD2C9952AE50CC900C17447 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		5BD2C9972AE50D8E00C17447 /* ToastType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastType.swift; sourceTree = "<group>"; };
+		5BD2C99A2AE513BF00C17447 /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
+		5BD2C99C2AE5162000C17447 /* FieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
+		5BD2C99E2AE517EB00C17447 /* RegisterField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +89,7 @@
 				5B4593362AE3C7EC00ACC7B9 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				5B45933C2AE3C7EC00ACC7B9 /* FirebaseAuth in Frameworks */,
 				5B4593402AE3C7EC00ACC7B9 /* FirebaseCrashlytics in Frameworks */,
+				5B4593692AE4F28500ACC7B9 /* OneGoLayoutConstraint in Frameworks */,
 				5B4593602AE3C7EC00ACC7B9 /* FirebaseRemoteConfigSwift in Frameworks */,
 				5B4593522AE3C7EC00ACC7B9 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				5B4593442AE3C7EC00ACC7B9 /* FirebaseDatabaseSwift in Frameworks */,
@@ -112,6 +130,7 @@
 		5B4593172AE3C60500ACC7B9 /* hackathonApp */ = {
 			isa = PBXGroup;
 			children = (
+				5B45936A2AE4F4A100ACC7B9 /* Views */,
 				5B4593182AE3C60500ACC7B9 /* AppDelegate.swift */,
 				5B45931A2AE3C60500ACC7B9 /* SceneDelegate.swift */,
 				5B45931C2AE3C60500ACC7B9 /* ViewController.swift */,
@@ -122,6 +141,45 @@
 				5B4593652AE3DA6800ACC7B9 /* NotificationManager.swift */,
 			);
 			path = hackathonApp;
+			sourceTree = "<group>";
+		};
+		5B45936A2AE4F4A100ACC7B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BD2C9992AE513B000C17447 /* RegisterCell */,
+				5BD2C9922AE502E000C17447 /* Headers */,
+				5B4593712AE5012500ACC7B9 /* ProgressCell */,
+				5BD2C9952AE50CC900C17447 /* ToastView.swift */,
+				5BD2C9972AE50D8E00C17447 /* ToastType.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B4593712AE5012500ACC7B9 /* ProgressCell */ = {
+			isa = PBXGroup;
+			children = (
+				5B45936B2AE4F4B200ACC7B9 /* ProgressCell.swift */,
+				5B45936F2AE4F67E00ACC7B9 /* ProgressView.swift */,
+			);
+			path = ProgressCell;
+			sourceTree = "<group>";
+		};
+		5BD2C9922AE502E000C17447 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5BD2C9932AE502EA00C17447 /* ProgressHeader.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		5BD2C9992AE513B000C17447 /* RegisterCell */ = {
+			isa = PBXGroup;
+			children = (
+				5BD2C99A2AE513BF00C17447 /* RegisterCell.swift */,
+				5BD2C99C2AE5162000C17447 /* FieldType.swift */,
+				5BD2C99E2AE517EB00C17447 /* RegisterField.swift */,
+			);
+			path = RegisterCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +226,7 @@
 				5B45935F2AE3C7EC00ACC7B9 /* FirebaseRemoteConfigSwift */,
 				5B4593612AE3C7EC00ACC7B9 /* FirebaseStorage */,
 				5B4593632AE3C7EC00ACC7B9 /* FirebaseStorageCombine-Community */,
+				5B4593682AE4F28500ACC7B9 /* OneGoLayoutConstraint */,
 			);
 			productName = hackathonApp;
 			productReference = 5B4593152AE3C60500ACC7B9 /* hackathonApp.app */;
@@ -199,6 +258,7 @@
 			mainGroup = 5B45930C2AE3C60500ACC7B9;
 			packageReferences = (
 				5B45932E2AE3C7EC00ACC7B9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5B4593672AE4F28500ACC7B9 /* XCRemoteSwiftPackageReference "OneGoLayoutConstraint" */,
 			);
 			productRefGroup = 5B4593162AE3C60500ACC7B9 /* Products */;
 			projectDirPath = "";
@@ -227,10 +287,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD2C99B2AE513BF00C17447 /* RegisterCell.swift in Sources */,
+				5BD2C9962AE50CCA00C17447 /* ToastView.swift in Sources */,
 				5B45931D2AE3C60500ACC7B9 /* ViewController.swift in Sources */,
+				5B45936C2AE4F4B200ACC7B9 /* ProgressCell.swift in Sources */,
 				5B4593192AE3C60500ACC7B9 /* AppDelegate.swift in Sources */,
 				5B4593662AE3DA6800ACC7B9 /* NotificationManager.swift in Sources */,
 				5B45931B2AE3C60500ACC7B9 /* SceneDelegate.swift in Sources */,
+				5BD2C99F2AE517EB00C17447 /* RegisterField.swift in Sources */,
+				5BD2C99D2AE5162000C17447 /* FieldType.swift in Sources */,
+				5B4593702AE4F67E00ACC7B9 /* ProgressView.swift in Sources */,
+				5BD2C9942AE502EA00C17447 /* ProgressHeader.swift in Sources */,
+				5BD2C9982AE50D8E00C17447 /* ToastType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +521,14 @@
 				minimumVersion = 10.16.0;
 			};
 		};
+		5B4593672AE4F28500ACC7B9 /* XCRemoteSwiftPackageReference "OneGoLayoutConstraint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/oneGo-inc/OneGoLayoutConstraint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -590,6 +666,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5B45932E2AE3C7EC00ACC7B9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		5B4593682AE4F28500ACC7B9 /* OneGoLayoutConstraint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B4593672AE4F28500ACC7B9 /* XCRemoteSwiftPackageReference "OneGoLayoutConstraint" */;
+			productName = OneGoLayoutConstraint;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

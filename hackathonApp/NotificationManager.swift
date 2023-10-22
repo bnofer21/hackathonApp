@@ -20,8 +20,8 @@ final class NotificationManager {
     
     func sendNotification() {
         let content = UNMutableNotificationContent()
-        content.title = "Your problem was solved"
-        content.body = "Open the app to see details"
+        content.title = "ЕЦП снова работает"
+        content.body = "Вы снова можете подписывать свои документы"
         content.badge = 1
         
         let triger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
