@@ -50,6 +50,8 @@
 		5BD2C99B2AE513BF00C17447 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C99A2AE513BF00C17447 /* RegisterCell.swift */; };
 		5BD2C99D2AE5162000C17447 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C99C2AE5162000C17447 /* FieldType.swift */; };
 		5BD2C99F2AE517EB00C17447 /* RegisterField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C99E2AE517EB00C17447 /* RegisterField.swift */; };
+		5BD2C9A32AE5276D00C17447 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C9A22AE5276D00C17447 /* NetworkService.swift */; };
+		5BD2C9A62AE52BB500C17447 /* ErrorEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD2C9A52AE52BB500C17447 /* ErrorEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		5BD2C99A2AE513BF00C17447 /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
 		5BD2C99C2AE5162000C17447 /* FieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
 		5BD2C99E2AE517EB00C17447 /* RegisterField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterField.swift; sourceTree = "<group>"; };
+		5BD2C9A22AE5276D00C17447 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5BD2C9A52AE52BB500C17447 /* ErrorEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		5B4593172AE3C60500ACC7B9 /* hackathonApp */ = {
 			isa = PBXGroup;
 			children = (
+				5BD2C9A42AE52BA400C17447 /* Models */,
 				5B45936A2AE4F4A100ACC7B9 /* Views */,
 				5B4593182AE3C60500ACC7B9 /* AppDelegate.swift */,
 				5B45931A2AE3C60500ACC7B9 /* SceneDelegate.swift */,
@@ -139,6 +144,7 @@
 				5B4593262AE3C60B00ACC7B9 /* Info.plist */,
 				5B45932C2AE3C78000ACC7B9 /* GoogleService-Info.plist */,
 				5B4593652AE3DA6800ACC7B9 /* NotificationManager.swift */,
+				5BD2C9A22AE5276D00C17447 /* NetworkService.swift */,
 			);
 			path = hackathonApp;
 			sourceTree = "<group>";
@@ -180,6 +186,14 @@
 				5BD2C99E2AE517EB00C17447 /* RegisterField.swift */,
 			);
 			path = RegisterCell;
+			sourceTree = "<group>";
+		};
+		5BD2C9A42AE52BA400C17447 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BD2C9A52AE52BB500C17447 /* ErrorEntry.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +304,7 @@
 				5BD2C99B2AE513BF00C17447 /* RegisterCell.swift in Sources */,
 				5BD2C9962AE50CCA00C17447 /* ToastView.swift in Sources */,
 				5B45931D2AE3C60500ACC7B9 /* ViewController.swift in Sources */,
+				5BD2C9A62AE52BB500C17447 /* ErrorEntry.swift in Sources */,
 				5B45936C2AE4F4B200ACC7B9 /* ProgressCell.swift in Sources */,
 				5B4593192AE3C60500ACC7B9 /* AppDelegate.swift in Sources */,
 				5B4593662AE3DA6800ACC7B9 /* NotificationManager.swift in Sources */,
@@ -298,6 +313,7 @@
 				5BD2C99D2AE5162000C17447 /* FieldType.swift in Sources */,
 				5B4593702AE4F67E00ACC7B9 /* ProgressView.swift in Sources */,
 				5BD2C9942AE502EA00C17447 /* ProgressHeader.swift in Sources */,
+				5BD2C9A32AE5276D00C17447 /* NetworkService.swift in Sources */,
 				5BD2C9982AE50D8E00C17447 /* ToastType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

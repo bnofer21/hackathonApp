@@ -30,10 +30,10 @@ enum ToastType {
 }
 
 enum ToastInfoType {
-    case success
-    case info
-    case warning
-    case error
+    case success(String? = nil)
+    case info(String? = nil)
+    case warning(String? = nil)
+    case error(String? = nil)
     
     var mainText: String {
         switch self {
@@ -50,14 +50,14 @@ enum ToastInfoType {
     
     var subText: String {
         switch self {
-        case .success:
-            return "Оповещение об успешно выполненом сценарии на странице"
-        case .info:
-            return "Информация о важных событиях в интерфейсе"
-        case .warning:
-            return "Информация об особенностях на странице"
-        case .error:
-            return "Информация о критической ошибке на странице"
+        case .success(let text):
+            return text ?? "Оповещение об успешно выполненом сценарии на странице"
+        case .info(let text):
+            return text ?? "Информация о важных событиях в интерфейсе"
+        case .warning(let text):
+            return text ?? "Информация об особенностях на странице"
+        case .error(let text):
+            return text ?? "Информация о критической ошибке на странице"
         }
     }
     

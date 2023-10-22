@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     }
     
     private let notificationManager = NotificationManager()
+    private let networkService = NetworkService()
     
     private let sendButton = UIButton(type: .infoLight)
     private lazy var collectionView = UICollectionView(
@@ -52,11 +53,6 @@ class ViewController: UIViewController {
         snapshot.appendItems([.progress], toSection: .progress)
         snapshot.appendItems([.fields], toSection: .fields)
         dataSource.apply(snapshot)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        showToast()
     }
 
     private func requestNotification() {
@@ -84,7 +80,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         
         view.addSubview(collectionView)
-        collectionView.pinToSuperView()
+        collectionView.pinToSuperView(sides: .topR, .leftR, .rightR)
         collectionView.register(ProgressCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.register(RegisterCell.self, forCellWithReuseIdentifier: "cellReg")
         collectionView.register(
@@ -92,6 +88,17 @@ class ViewController: UIViewController {
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: "header"
         )
+        
+        view.addSubview(sendButton)
+        sendButton.pin(side: .top(16), to: .bottom(collectionView))
+        sendButton.pinToSuperView(sides: .left(20), .right(-20), .bottom(-32))
+        sendButton.setDemission(.height(48))
+        sendButton.setTitle("Отправить", for: .normal)
+        sendButton.setTitleColor(.white, for: .normal)
+        sendButton.titleLabel?.textAlignment = .center
+        sendButton.backgroundColor = .systemBlue
+        sendButton.layer.cornerRadius = 12
+        sendButton.addTarget(self, action: #selector(sendNotification), for: .touchUpInside)
     }
     
     func configureDataSource() -> UICollectionViewDiffableDataSource<Section, Item> {
@@ -154,12 +161,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func showToast() {
-        let types: [ToastType] = [.notification(.error), .notification(.warning), .notification(.info), .notification(.success)]
-        let randomType = types[Int.random(in: 0...3)]
-        
+    func showToast(type: ToastType) {
         let toast = ToastView(frame: CGRect(x: 20, y: -90, width: view.bounds.width-40, height: 90))
-        toast.configure(type: randomType)
+        toast.configure(type: type)
         view.addSubview(toast)
         UIView.animate(withDuration: 0.5) {
             toast.transform = .init(translationX: 0, y: 160)
@@ -171,9 +175,51 @@ class ViewController: UIViewController {
         }
     }
     
+    func createRandomError() -> ErrorEntry {
+        let errors = [
+            ErrorEntry(
+                error_type: "Textfield",
+                details: "Password validation error",
+                priority: "Low"
+            ),
+            ErrorEntry(
+                error_type: "View",
+                details: "Some problems with platform",
+                priority: "Low"
+            ),
+            ErrorEntry(
+                error_type: "Network",
+                details: "Couldn't get data",
+                priority: "High"
+            ),
+            ErrorEntry(
+                error_type: "Database",
+                details: "Password validation error",
+                priority: "Medium"
+            ),
+            ErrorEntry(
+                error_type: "Database",
+                details: "Minor latency issues 21212",
+                priority: "High"
+            ),
+        ]
+        return errors.last!
+//        return errors[Int.random(in: 0..<errors.count)]
+    }
+    
     @objc
     func sendNotification() {
-        notificationManager.sendNotification()
+        let model = createRandomError()
+        networkService.reportError(error: model) { error in
+            DispatchQueue.main.async {
+                if let error {
+                    print(error)
+                } else {
+                    self.showToast(type: .notification(.error("Ошибка успешно отправлена!")))
+                    self.notificationManager.sendNotification()
+                }
+            }
+        }
     }
 
 }

@@ -34,7 +34,7 @@ private extension RegisterCell {
         contentView.addSubview(infoToast)
         infoToast.pinToSuperView(sides: .topR, .left(20), .right(-20))
         infoToast.setDemission(.height(100))
-        infoToast.configure(type: .info(.info))
+        infoToast.configure(type: .info(.info()))
         
         contentView.addSubview(stackView)
         stackView.pin(side: .top(26), to: .bottom(infoToast))
