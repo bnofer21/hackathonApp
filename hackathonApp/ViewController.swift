@@ -214,7 +214,7 @@ class ViewController: UIViewController {
                 if let error {
                     print(error)
                 } else {
-                    self.showToast(type: .notification(.error("Ошибка успешно отправлена!")))
+                    self.showToast(type: .notification(.error("Напишите в техническую поддержку для помощи")))
                     self.notificationManager.sendNotification()
                 }
             }

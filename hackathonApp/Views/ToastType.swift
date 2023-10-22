@@ -44,7 +44,7 @@ enum ToastInfoType {
         case .warning:
             return "Предупреждение"
         case .error:
-            return "Ошибка"
+            return "Ошибка регистрации"
         }
     }
     
